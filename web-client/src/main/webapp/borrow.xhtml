@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+    <title>Borrow CD</title>
+</h:head>
+<h:body>
+    <h:form>
+        <h2>Borrow a CD</h2>
+        <h:inputText value="#{cdDvdBean.cdId}" placeholder="Enter CD ID" />
+        <h:commandButton value="Borrow" action="#{cdDvdBean.borrowCd}" />
+    </h:form>
+</h:body>
+</html>

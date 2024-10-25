@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+   <title>Borrowed CDs</title>
+</h:head>
+<h:body>
+   <h:form>
+      <h2>Borrowed CDs</h2>
+      <h:dataTable value="#{cdDvdBean.borrowedCds}" var="cd">
+         <h:column>
+            <f:facet name="header">ID</f:facet>
+            #{cd.id}
+         </h:column>
+         <h:column>
+            <f:facet name="header">Title</f:facet>
+            #{cd.title}
+         </h:column>
+      </h:dataTable>
+   </h:form>
+</h:body>
+</html>

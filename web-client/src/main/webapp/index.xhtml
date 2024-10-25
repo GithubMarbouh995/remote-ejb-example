@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+  <title>Liste des CDs</title>
+</h:head>
+<h:body>
+  <h:form>
+    <h2>CDs disponibles</h2>
+    <h:dataTable value="#{cdDvdBean.availableCds}" var="cd">
+      <h:column>
+        <f:facet name="header">ID</f:facet>
+        #{cd.id}
+      </h:column>
+      <h:column>
+        <f:facet name="header">Titre</f:facet>
+        #{cd.title}
+      </h:column>
+    </h:dataTable>
+
+    <h2>CDs empruntés</h2>
+    <h:dataTable value="#{cdDvdBean.borrowedCds}" var="cd">
+      <h:column>
+        <f:facet name="header">ID</f:facet>
+        #{cd.id}
+      </h:column>
+      <h:column>
+        <f:facet name="header">Titre</f:facet>
+        #{cd.title}
+      </h:column>
+    </h:dataTable>
+
+    <h2>Emprunter un CD</h2>
+    <h:inputText value="#{cdDvdBean.cdId}" />
+    <h:commandButton value="Emprunter" action="#{cdDvdBean.borrowCd}" />
+
+    <h2>Retourner un CD</h2>
+    <h:inputText value="#{cdDvdBean.cdId}" />
+    <h:commandButton value="Retourner" action="#{cdDvdBean.returnCd}" />
+  </h:form>
+</h:body>
+</html>

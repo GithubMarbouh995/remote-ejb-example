@@ -8,6 +8,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ejb-remote-server" />
         <module name="ejb-remote-client" />
+        <module name="web-client" />
+        <module name="desktop-client" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
